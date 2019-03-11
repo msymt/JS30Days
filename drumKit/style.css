@@ -52,3 +52,8 @@
 /* .key-box:not(:active) {
     transition: border-color 100ms step-end;
 } */
+
+.playing {
+    font-size: 20px;
+    border-color: yellow;
+}
