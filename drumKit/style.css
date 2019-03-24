@@ -43,10 +43,12 @@
 
 .key-box:active {
     border-color: yellow;
+    box-shadow: 0px 0px 3px 3px yellow;
 }
 
 .key-box-contents:active {
     font-size: 20px;
+    box-shadow: 0px 0px 3px 3px yellow;
 }
 
 /* .key-box:not(:active) {
@@ -56,4 +58,5 @@
 .playing {
     font-size: 20px;
     border-color: yellow;
+    box-shadow: 0px 0px 3px 3px yellow;
 }
