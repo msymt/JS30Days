@@ -1,16 +1,15 @@
 body {
-    background-image: url("./images/sample.png");
+    background-image: url("./images/test.jpg");
     background-size: cover;
 }
 
 .clock {
-    position: relative;
+    position: absolute;
     display: inline-block;
     vertical-align: middle;
-    border: solid 7px black;
-    background: white;
+    border: solid 7px rgb(98, 92, 92);
+    background-color: white;
     border-radius: 50%;
-    position: absolute;
     top : 0;
     right: 0;
     bottom: 0;
@@ -20,43 +19,36 @@ body {
     height: 250px;
 }
 
-.clock-contents {
-    text-align:center;
-    
-}
-
-.clock-hour {
-    background-color: black;
-    position: absolute;
-    top : 0;
-    right: 20%;
-    bottom: 0;
+.clock-center {
+    position: relative;
+    top: 50%;
     left: 50%;
-    margin: auto;
-    height: 5px;
-    /* transform: rotate(-45deg); */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background: rgb(129, 123, 123);
 }
 
-.clock-minute {
-    background-color: blue;
+.hand {
     position: absolute;
-    top : 0;
-    right: 50%;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 5px;
-    /* transform: rotate(-45deg); */
+    bottom: 50%;
+    left: 50%;
+    background-color: silver;
+    transform-origin: 50% 100%; /* 底を中心として回転 */
 }
 
-.clock-second {
-    background-color: red;
-    position: absolute;
-    top : 0;
-    right: 50%;
-    bottom: 0;
-    left: 10%;
-    margin: auto;
-    height: 5px;
-    /* transform: rotate(45deg); */
+.hour.hand{
+    width: 6px;
+    height: 90px;
+}
+
+.minute.hand {
+    width: 4px;
+    height: 125px;
+}
+
+.second.hand {
+    width: 2px;
+    height: 110px;
 }
