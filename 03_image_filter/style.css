@@ -1,0 +1,19 @@
+body {
+    background-image: url("./images/test.jpg");
+    background-size: cover;
+}
+.section >h2 {
+    color: aliceblue;   
+}
+
+.color-range {
+    width: 500px;
+    height: 500px;
+    background: black;
+}
+
+.aligncenter {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}

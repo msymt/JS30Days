@@ -1,7 +1,7 @@
 onload = () => {
-  const second = document.querySelector(".second.hand");
-  const minute = document.querySelector(".minute.hand");
-  const hour = document.querySelector(".hour.hand");
+  const second = document.querySelector('.second.hand');
+  const minute = document.querySelector('.minute.hand');
+  const hour = document.querySelector('.hour.hand');
   setInterval( () => {
     const date = new Date();
     console.log(date);
