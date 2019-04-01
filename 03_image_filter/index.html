@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Page Title</title>
@@ -7,28 +8,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="image_filter.js"></script>
 </head>
-<body>
-    <section>
-        <h2>
-            Image fillter with
-            <div id="selected-color-section">JS</div>
-        </h2>
-    </section>
-    <div class="spacing-bar">
-        Spacing:
-        <input type="range" id="spacing-range" min="0" max="10" step="1" value="0">
-    </div>
-    <div class="blar-bar">
-        Blur: 
-        <input type="range" id="blur-range" min="0" max="10" step="1" value="0">
-    </div>
-    <div class="color-picker">
-        Base Color:
-        <input type="color"  value="#ff0000" id="color-selected">
-    </div>
 
-    <div class="color-range">
-        <img src="./images/sample.jpeg" alt=" " class="aligncenter" />
+<body>
+    <div class="main-container">
+        <div class="image-filter-controller">
+            <div class="spacing-bar">
+                Spacing:
+                <input type="range" id="spacing-range" min="0" max="10" step="1" value="0" oninput="spacingChange(event)">
+            </div>
+            <div class="blar-bar">
+                Blur:
+                <input type="range" id="blur-range" min="0" max="10" step="1" value="0" oninput="blurChange(event)">
+            </div>
+            <div class="color-picker">
+                Base Color:
+                <input type="color" value="#ff0000" id="color-selected" oninput="colorChange(event)">
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="image"></div>
+        </div>
     </div>
 </body>
+
 </html>
