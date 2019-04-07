@@ -1,0 +1,20 @@
+{
+  "name": "js30days",
+  "version": "1.0.0",
+  "main": "array_cardio_1.js",
+  "dependencies": {
+    "eslint-config-rallycoding": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-google": "^0.12.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
