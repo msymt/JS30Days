@@ -7,6 +7,7 @@ Vanilla JS つまり, 単なるJavaScriptのみを用いて30個のchallengeを�
 ---
 
 以下に記した日程まで進めている.
-- day1: drum-kit[完成]
-- day2: css-js-clock[完成]
-- day3: image-filter[進行中]
+- day1: drum-kit[完了]
+- day2: css-js-clock[完了]
+- day3: image-filter[完了]
+- day4: Array-Cardio-Day-1[完了]
