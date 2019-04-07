@@ -1,4 +1,4 @@
-# challenge 3 image-filterを作成する🥁🥁
+# challenge 3 image-filterを作成する
 ## challenge 内容📒
 - バーを動かすことで、imageにリアルタイムで変化を与えるツール
 

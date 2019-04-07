@@ -1,4 +1,4 @@
-# challenge 2 Analog Clockを作成する🥁🥁
+# challenge 2 Analog Clockを作成する
 ## challenge 内容📒
 - アナログ時計のアプリをブラウザー上で作成する
 
