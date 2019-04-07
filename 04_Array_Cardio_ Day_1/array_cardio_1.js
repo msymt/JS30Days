@@ -42,6 +42,7 @@ const inventors = [{
 },
 ];
 
+const inventors2 = inventors.slice(0, inventors.length);
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
 
@@ -60,10 +61,11 @@ console.log(2, result2);
 answer.push(result2);
 
 // sort
-const result3 = inventors.sort((a, b) => {
+// inventorを使うと、上手くいかない。
+const result3 = inventors2.sort((a, b) => {
   // console.log(a.year);
   // console.log(b.year);
-  return a.year < b.year ? 1: -1;
+  return a.year > b.year ? 1: -1;
 });
 console.log(3, result3);
 answer.push(result3);
@@ -87,12 +89,6 @@ const result5 = inventors.sort((a, b) => {
 });
 console.log(5, result5);
 answer.push(result5);
-// const result5 = inventors.sort((a, b) => {
-//   const timeA = (a.passed - a.year);
-//   const timeB = (b.passed - b.year);
-//   return timeA > timeB ? -1: 1;
-// });
-// console.log(4, result5);
 
 // sort
 const result6 = people.sort((a, b) => {
@@ -111,18 +107,7 @@ data.map((element) => {
   }
   obj[element]++;
 });
-// const result7 = obj.f((element) => {
-//   console.log(element);
-//   return element;
-// })
-// const result8 = data.filter((element, index, data) => {
-//   if (index === data.indexOf(element)) {
-//     // arrayData.push(element.)
-//   } else {
-//     arrayData.push(element);
-//   }
-//   // return index === data.indexOf(element);
-// });
+
 obj.length = Object.keys(obj).length;
 console.log(7, obj);
 answer.push(obj);
@@ -144,8 +129,3 @@ for (let index = 1; index <= answer.length; index++) {
   }
 }
 document.write('</div>');
-
-// let JsonStringfyWrite = (array, index) => {
-//   const jsonString = JSON.stringify(array[index - 1]);
-//   document.write(jsonString + '<br />');
-// }
