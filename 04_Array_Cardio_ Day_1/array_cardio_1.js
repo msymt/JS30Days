@@ -52,25 +52,33 @@ const result1 = inventors.filter((info) => info.year >= 1500 && info.year < 1600
 console.log(1, result1);
 answer.push(result1);
 
-const arrayName = {};
-let index = 0;
+// map
 const result2 = inventors.map((info) => {
-  arrayName[index] = `${info.first}` + ' ' + `${info.last}`;
-  index++;
+  return `${info.first}` + ' ' + `${info.last}`;
 });
-console.log(2, arrayName);
-answer.push(arrayName);
+console.log(2, result2);
+answer.push(result2);
 
-const result3 = inventors.sort((a, b) => a.year - b.year);
+// sort
+const result3 = inventors.sort((a, b) => {
+  // console.log(a.year);
+  // console.log(b.year);
+  return a.year < b.year ? 1: -1;
+});
 console.log(3, result3);
 answer.push(result3);
 
-const result4 = inventors.reduce((sum, time) => {
+// reduce
+const result4_tmp = inventors.reduce((sum, time) => {
   return sum + (time.passed - time.year);
 }, 0);
+const result4 = [result4_tmp];
 console.log(4, result4);
 answer.push(result4);
+console.log(answer);
 
+
+// sort
 // const result5 = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year));
 const result5 = inventors.sort((a, b) => {
   const timeA = (a.passed - a.year);
@@ -86,10 +94,11 @@ answer.push(result5);
 // });
 // console.log(4, result5);
 
+// sort
 const result6 = people.sort((a, b) => {
-  const nameA = a.toUpperCase(); // 大文字と小文字を無視する
-  const nameB = b.toUpperCase();
-  return nameA < nameB ? -1: 1;
+  const arrA = a.toUpperCase().split(','); // 大文字と小文字を無視する
+  const arrB = b.toUpperCase().split(',');
+  return arrA[1] < arrB[1] ? -1: 1;
 });
 console.log(6, result6);
 answer.push(result6);
@@ -102,6 +111,10 @@ data.map((element) => {
   }
   obj[element]++;
 });
+// const result7 = obj.f((element) => {
+//   console.log(element);
+//   return element;
+// })
 // const result8 = data.filter((element, index, data) => {
 //   if (index === data.indexOf(element)) {
 //     // arrayData.push(element.)
@@ -110,14 +123,29 @@ data.map((element) => {
 //   }
 //   // return index === data.indexOf(element);
 // });
+obj.length = Object.keys(obj).length;
 console.log(7, obj);
 answer.push(obj);
 console.log(answer);
 
+let temp = 0;
 document.write('<div>');
 for (let index = 1; index <= answer.length; index++) {
   document.write('<b>問題</b>' + index + '<br />');
-  const jsonString = JSON.stringify(answer[index - 1]);
-  document.write(jsonString+ '<br />' + '<br />');
+  for (let j = 1; j <= answer[index - 1].length; j++) {
+    if (answer[index - 1][j - 1] === undefined) {
+      delete answer[index -1].length;
+      const jsonString = JSON.stringify(answer[index - 1]);
+      document.write(jsonString+ '<br />');
+      break
+    }
+    const jsonString = JSON.stringify(answer[index - 1][j - 1]);
+    document.write(jsonString+ '<br />');
+  }
 }
 document.write('</div>');
+
+// let JsonStringfyWrite = (array, index) => {
+//   const jsonString = JSON.stringify(array[index - 1]);
+//   document.write(jsonString + '<br />');
+// }
