@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "analog_clock.js",
   "dependencies": {
-    "eslint-config-rallycoding": "^3.2.0"
+    "eslint-config-rallycoding": "^3.2.0",
+    "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "eslint": "^5.15.3",
