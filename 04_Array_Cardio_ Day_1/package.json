@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "array_cardio_1.js",
   "dependencies": {
-    "eslint-config-rallycoding": "^3.2.0"
+    "eslint-config-rallycoding": "^3.2.0",
+    "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
